@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Changer</title>
+    <style>
+      body {
+        height: 100vh;
+        background-color: black;
+        color: white;
+        text-align: center;
+      }
+
+      .vk {
+        background-color: yellow;
+        color: black;
+        border: 2px solid black;
+        padding: 10px;
+        margin: 20px;
+        border-radius: 18px;
+      }
+
+      .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .image > img {
+        border: 5px solid blue;
+        border-radius:10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Image changer</h1>
+    <div class="image">
+      <img
+        src="https://brightcove.iplt20.com/output/input/6353724999112-1718526347.jpg"
+        alt=""
+        height="400px"
+        width="500px"
+      />
+
+      <h1 class="vk">Viart Kohli</h1>
+
+      <script>
+        let img = document.querySelector("img");
+        let h1 = document.querySelector(".vk");
+        let prevImg = img.src
+        let prevTxt = h1.innerHTML
+
+        img.addEventListener("mouseover", () => {
+          img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnKZ9iEmDTc1EVodRFmzShVDFOO4GOnFmgZzkmsomgXVdAtny-"
+          h1.innerHTML="Yash"
+        })
+        img.addEventListener("mouseleave", () => {
+          img.src = "https://brightcove.iplt20.com/output/input/6353724999112-1718526347.jpg"
+          h1.innerHTML="Virat Kohli"
+        })
+      </script>
+    </div>
+  </body>
+</html>
